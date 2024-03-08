@@ -31,8 +31,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Setup Pages
-      - name: Build
       - name: Node Setup
         uses: actions/setup-node@v3
         with:
@@ -40,7 +38,7 @@ jobs:
           cache: 'npm'
       - name: Install Dependencies
         run: npm install
-      - name: build site
+      - name: Build Site
         run: npm run build
       - name: Setup Pages
         uses: actions/configure-pages@v4
